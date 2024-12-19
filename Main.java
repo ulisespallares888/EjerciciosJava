@@ -1,11 +1,7 @@
 
-import SintaxisBasicaDeJava.Hola_Mundo;
-import SintaxisBasicaDeJava.SumarDosNumeros;
-
+import SintaxisBasicaDeJava.*;
 class Main {
     public static void main(String[] args) {
-    //Hola_Mundo.holaMundo();
-    //SumarDosNumeros.manipularValores();
 
     }
 }
