@@ -1,7 +1,7 @@
 package SintaxisBasicaDeJava;
 
 public class Fibonacci {
-    public static int fibonacciDeNValor(int valor){
+    public static int fibonacciDeUnValor(int valor){
 
         if (valor > 1){
             int primerValor=1;
