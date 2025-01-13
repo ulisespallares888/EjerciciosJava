@@ -9,33 +9,15 @@ public class Main {
     public static void main(String[] args) {
 
         List<String> personas = Arrays.asList("Juan", "Pedro", "Maria", "Ana", "Luis", "Carlos", "Jose", "Luisa", "Fernando", "Sofia");
-
-        // Personas ordenadas alfabeticamente
-        List<String> personasOrdenadas = personas.stream()
-                                                .sorted()
-                                                .collect(Collectors.toList());
-
-        System.out.println("Personas ordenadas alfabeticamente");
-        personasOrdenadas.forEach(System.out::println);
+        List<Integer> valores = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
 
-        // Cantidad  de personas
-        Long cantPersonas = personas.stream().count();
-        System.out.printf("Cantidad  de personas %d \n",cantPersonas);
+        System.out.println(MyStreams.ordenarLista(personas));
+        System.out.println(MyStreams.personasConLetra(personas,'Z'));
+        System.out.println(MyStreams.contElementos(personas));
+        System.out.println(MyStreams.contElementos(valores));
 
-        // Personas que comienzan con una letra
-        char letra = 'L';
-
-        List<String> personasLetra = personas.stream()
-                                            .filter(p -> {
-
-                                                return p.startsWith(String.valueOf(letra));
-                                            })
-                                            .collect(Collectors.toList());
-
-        System.out.println("Personas que comienzan con una letra L ");
-        personasLetra.forEach(System.out::println);
-
+        System.out.println(MyStreams.sumarElemntos(valores));
 
 
     }
