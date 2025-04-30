@@ -3,6 +3,7 @@ package SintaxisBasicaDeJava;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MyStreams {
@@ -32,6 +33,16 @@ public class MyStreams {
     // Suma de elementos
     public static Integer sumarElemntos(List<Integer> listaValores){
         return listaValores.stream().reduce(Integer::sum).get();
+        //return listaValores.stream().reduce((a,b) -> a+b).get();
+    }
+
+
+    // Sumar las letras de todos los elementos de una lista que contengan una letra
+    public static Integer sumarTodasLasLetras(List<String> list, CharSequence letra){
+        Predicate<String> sumarLetraDeUnaPalabra = l -> {
+            return l.contains(letra);
+        };
+        return list.stream().filter(sumarLetraDeUnaPalabra).mapToInt(String::length).sum();
     }
 
 }
