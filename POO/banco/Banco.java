@@ -1,4 +1,4 @@
-package POO;
+package POO.banco;
 
 public class Banco {
     public static void EjecutarTransaccion( Transaccion transaccion){
