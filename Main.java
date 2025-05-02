@@ -1,28 +1,20 @@
 
-import POO.Estudiante;
+import Collections.BuscarEnLista;
+import Collections.Edades;
+
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Estudiante> estudiantesArrayList = new ArrayList<>();
+        List<Integer> listaDeEdades = new ArrayList<>(List.of(1,2,3,4));
 
-        estudiantesArrayList.add(new Estudiante("ulises", "pallares",22692));
-        estudiantesArrayList.add(new Estudiante("juan", "Mota",88865));
-        estudiantesArrayList.add(new Estudiante("matias", "soto",77898));
+        System.out.println(BuscarEnLista.buscarElementoEnUnaLista(listaDeEdades,6));
 
-        //estudiantesArrayList.forEach(System.out::println);
 
-        List<Estudiante> estConLetraA = estudiantesArrayList.stream()
-                .filter(p -> p.getApellido().contains("s")
-                            && p.getNombre().contains("s")
-                )
-                .peek(p-> System.out.println("mostando al estudiante"+p.getNroLegajo()))
-                .toList();
 
-        estConLetraA.forEach(System.out::println);
     }
 }
