@@ -1,4 +1,4 @@
-package POO;
+package POO.banco;
 
 public class CuentaBancaria {
     private Integer Dinero;

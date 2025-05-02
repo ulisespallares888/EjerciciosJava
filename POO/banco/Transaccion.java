@@ -1,4 +1,4 @@
-package POO;
+package POO.banco;
 
 public class Transaccion {
     private CuentaBancaria Debita;
