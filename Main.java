@@ -1,19 +1,28 @@
 
-import POO.animales.Gato;
-import POO.animales.Perro;
-import POO.banco.Banco;
-import POO.banco.CuentaBancaria;
-import POO.banco.Transaccion;
+import POO.Estudiante;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class Main {
     public static void main(String[] args) {
-        Perro perro = new Perro();
-        Gato gato = new Gato();
+        ArrayList<Estudiante> estudiantesArrayList = new ArrayList<>();
 
-        perro.hacerRuido();
-        gato.hacerRuido();
+        estudiantesArrayList.add(new Estudiante("ulises", "pallares",22692));
+        estudiantesArrayList.add(new Estudiante("juan", "Mota",88865));
+        estudiantesArrayList.add(new Estudiante("matias", "soto",77898));
 
+        //estudiantesArrayList.forEach(System.out::println);
 
+        List<Estudiante> estConLetraA = estudiantesArrayList.stream()
+                .filter(p -> p.getApellido().contains("s")
+                            && p.getNombre().contains("s")
+                )
+                .peek(p-> System.out.println("mostando al estudiante"+p.getNroLegajo()))
+                .toList();
+
+        estConLetraA.forEach(System.out::println);
     }
 }
