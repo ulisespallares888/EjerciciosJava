@@ -11,8 +11,12 @@ public class Persona {
     private double peso;
     private double altura;
 
+    public Persona( String nombre,  int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
 
-    public void Persona(String apellido, String nombre, int dni, int edad, char sexo, double peso, double altura) {
+    public Persona(String apellido, String nombre, int dni, int edad, char sexo, double peso, double altura) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.dni = dni;
@@ -22,7 +26,8 @@ public class Persona {
         this.altura = altura;
     }
 
-    public void Persona() {
+
+    public  Persona() {
     }
 
     public void setApellido(String apellido) {
@@ -39,5 +44,9 @@ public class Persona {
 
     public String getNombre() {
         return this.nombre;
+    }
+
+    public int getEdad(){
+        return this.edad;
     }
 }

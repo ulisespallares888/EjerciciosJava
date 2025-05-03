@@ -5,6 +5,7 @@ public class Estudiante extends Persona {
     private int nroLegajo;
 
     public Estudiante(String nombre, String apellido, int nroLegajo){
+        super();
         super.setApellido(apellido);
         super.setNombre(nombre);
         this.nroLegajo = nroLegajo;
