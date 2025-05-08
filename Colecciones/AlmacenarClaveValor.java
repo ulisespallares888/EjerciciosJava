@@ -1,4 +1,4 @@
-package Collections;
+package Colecciones;
 
 import POO.Persona;
 import java.util.HashMap;
