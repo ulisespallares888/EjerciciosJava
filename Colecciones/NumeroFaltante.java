@@ -1,22 +1,21 @@
 package Colecciones;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class NumeroFaltante {
 
 
     static public Integer valorFaltante(List<Integer> listaDeNumeros, Integer longitud){
 
-        List<Integer> listaDeNumerosOrdenada = listaDeNumeros.stream().sorted().toList();
+        Set<Integer> setDeNumeros = new HashSet<>(listaDeNumeros);
 
-        Integer valor = null;
-        for (int i = 0; i < longitud; i++) {
-            if (!listaDeNumerosOrdenada.get(i).equals(i)) {
-                valor = i;
-                break;
+        for (int i = 0; i < longitud + 1; i++) {
+            if (!setDeNumeros.contains(i)) {
+                return i;
             }
-
         }
-        return valor;
+        return null;
     }
 }

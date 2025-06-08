@@ -8,7 +8,7 @@ public class Main {
         LinkedList<String> cola = new LinkedList<>(
                 Arrays.asList("ulises","pablo","juan","matias","tobias","carlos")
         );
-        List<Integer> lista = Arrays.asList(4,6,3,8,9,10,2,1,5,0);
+        List<Integer> lista = Arrays.asList(4,6,3,8,9,7,2,10,1,5);
         Integer longitud = 10;
 
         System.out.println("Valor faltante " + NumeroFaltante.valorFaltante(lista,longitud));
